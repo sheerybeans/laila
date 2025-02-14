@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900" rel="stylesheet">
+  <title>Hi, Laila!</title>
+  <style>
+    * {
+      font-family: "Nunito", sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+      float: left;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .clear {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .container-content {
+      float: left;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background-color: pink;
+      color: red;
+    }
+
+    .button-holder {
+      float: left;
+      width: 100%;
+      text-align: center;
+      height: 100%;
+    }
+
+    .button-holder input {
+      margin: 10px;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      color: red;
+      width: 80%;
+      border-radius: 5px;
+    }
+
+    .container-holder {
+      float: left;
+      text-align: center;
+      width: 100%;
+
+    }
+
+    .container-holder h2 {
+      font-size: 2rem;
+      padding: 20px;
+    }
+
+    .two {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background-color: pink;
+      left: -100%;
+      top: 0;
+    }
+
+    .two-container {
+      float: left;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: red;
+    }
+
+    span.two-next {
+      background-color: red;
+      color: pink;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .three {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background-color: pink;
+      right: -100%;
+      top: 0;
+    }
+
+    .three-container {
+      float: left;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: red;
+    }
+
+    span.three-next {
+      background-color: red;
+      padding: 10px;
+      border-radius: 10px;
+      color: pink;
+      cursor: pointer;
+    }
+
+    .four {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background-color: pink;
+      top: -100%;
+
+    }
+
+    .four-container {
+      float: left;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: red;
+    }
+
+    span.four-next {
+      background-color: red;
+      padding: 10px;
+      border-radius: 10px;
+      color: pink;
+      cursor: pointer;
+    }
+
+    .five {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background-color: #FFFF00;
+      bottom: -100%;
+
+    }
+
+    .five-container {
+      float: left;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    span.five-next {
+      background-color: green;
+      padding: 10px;
+      border-radius: 10px;
+      color: #fefefe;
+      cursor: pointer;
+    }
+
+    .six {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background-color: pink;
+      display: none;
+
+    }
+
+    .six-container {
+      float: left;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+      color: red;
+    }
+
+    span.first-next {
+      background-color: red;
+      padding: 10px;
+      border-radius: 10px;
+      color: pink;
+      cursor: pointer;
+    }
+
+    .seven {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background-color: #7d3bd4;
+      display: none;
+
+    }
+
+    .seven-container {
+      float: left;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    span.seven-next {
+      background-color: green;
+      padding: 10px;
+      border-radius: 10px;
+      color: #fefefe;
+      cursor: pointer;
+    }
+
+    .image-holder {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-holder img {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 660px) {}
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="container-content">
+      <div class="container-holder">
+        <h2>This file is intended to someone very special. To confirm, please type your first name.</h2>
+        <div class="button-holder">
+          <input type="text" id="name">
+          <br>
+          <br>
+          <span class="first-next">Next</span>
+        </div>
+      </div>
+    </div>
+    <div class="two">
+      <div class="two-container">
+        <div class="container-holder">
+          <h2>To verify this is <span id="username"></span>. Kindly type your PUBG username?</h2>
+          <br>
+          <div class="button-holder">
+            <input type="text" id="username">
+            <br>
+            <br>
+            <span class="two-next" id="pubgId">Next</span>
+          </div>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="three">
+      <div class="three-container">
+        <div class="container-holder">
+          <h2>Due to work reasons, I was extended here in Iloilo until the 22nd of Feb. making it impossible for me to
+            give you this valentines gift personally.
+            Nevertheless, as an engineer - we find ways.
+            Please click ok to proceed.
+            <br><br><span class="three-next">OK</span>
+          </h2>
+        </div>
+
+      </div>
+    </div>
+    <div class="four">
+      <div class="four-container">
+        <div class="container-holder">
+          <h2>HAPPY VALENTINES DAY LAIS!. I just pray this simple gesture will make you smile today. Also would like to
+            express my admiration towards you through this work. Enjoy!
+
+            <br><br><span class="four-next" id="readME">READ MEE!!!!!</span>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="six">
+      <div class="six-container">
+        <div id="poem"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      var audio = new Audio('ikot.mp3');
+      const poem = `
+			Hi Lais! I’m writing this poem for you
+      Hope while reading, you will smile at it too
+      This may appear random and out of the blue
+      You won’t regret staying for a minute or two
+
+      How do I start to let you know?
+      That your spirit shines and countenance glow
+      Your testimony is like a river which constantly flows
+      Abundant and eternal that continually grows
+
+      Please know your eyes are captivating
+      Your pretty smile, even more so mesmerizing
+      Your brain? We all know CPAs are amazing
+      This simply proves how great you are as a human being
+
+      Seriously, I want to know you even more
+      Can’t stop praying about it for sure
+      A lady like you who is mindful, cutesy, and demure
+      A sister in Zion, ever so worthy and pure
+
+      Knowing you inspired me to be a better man
+      I’m driven in ways that no one else can
+      Continue to be a beacon to those other younger women
+      Your existence strengthened my resolve to follow His plan
+
+      I pray you felt the goodness of my intention
+      No rush, no pressure nor bad impression
+      I may or may not have gotten your attention
+      Thank God for helping me write you this recitation
+
+      I appreciate you staying until the end
+      Hope these verses made you happy and enlightened
+      Let us continue to help each other improve and ascend
+      That we may become celestial beings no mere mortals could comprehend
+      <br>
+			`;
+
+      $('span.first-next').click(function () {
+        $('span#username').text($('input#name').val())
+        $('.two').animate({
+          left: 0
+        })
+      })
+      $('span#pubgId').click(function () {
+        if ($('input#username').val() == "luxeslim") {
+          $('.three').animate({
+            right: 0
+          })
+        }
+
+      })
+      $('span.three-next').click(function () {
+        $('.four').animate({
+          top: 0
+        })
+      })
+      $('span#readME').click(function () {
+        $('.six').fadeIn();
+        audio.play()
+        typeWriter()
+      })
+      let i = 0, j = 0;
+      let poemLines = poem.split('<br>');
+      let speed = 175;
+
+      function typeWriter() {
+        if (i < poemLines.length) {
+          let line = poemLines[i].trim();
+          if (j === 0) {
+            $('div#poem').append('<span id="line-' + i + '"></span><br>');
+            let firstLetter = line.charAt(0);
+            let restOfLine = line.slice(1);
+            $('#line-' + i).append('<span class="first-letter">' + firstLetter + '</span>');
+            $('#line-' + i).append('<span class="line-content"></span>');
+          }
+          if (j < line.length - 1) {
+            $('.line-content:last').append(line.charAt(j + 1));
+            j++;
+            setTimeout(typeWriter, speed);
+          } else {
+            i++;
+            j = 0;
+            setTimeout(typeWriter, speed);
+          }
+        } else {
+          $('div#poem').append('<h5 id="author">- Kibz</h5>')
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
