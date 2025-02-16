@@ -255,6 +255,7 @@
     div#poem {
       padding: 5px;
       font-size: 15px;
+      overflow: scroll;
     }
 
     @media (max-width: 660px) {}
@@ -397,7 +398,7 @@
       })
       let i = 0, j = 0;
       let poemLines = poem.split('<br>');
-      let speed = 175;
+      let speed = 1;
 
       function typeWriter() {
         if (i < poemLines.length) {
