@@ -252,6 +252,11 @@
       height: auto;
     }
 
+    div#poem {
+      padding: 5px;
+      font-size: 15px;
+    }
+
     @media (max-width: 660px) {}
   </style>
 </head>
@@ -276,7 +281,7 @@
           <h2>To verify this is <span id="username"></span>. Kindly type your PUBG username?</h2>
           <br>
           <div class="button-holder">
-            <input type="text" id="username">
+            <input type="text" id="username" value="luxeslim">
             <br>
             <br>
             <span class="two-next" id="pubgId">Next</span>
@@ -317,38 +322,48 @@
   </div>
   <script>
     $(document).ready(function () {
+
+
       var audio = new Audio('ikot.mp3');
+
+
       const poem = `
 			Hi Lais! I’m writing this poem for you
       Hope while reading, you will smile at it too
       This may appear random and out of the blue
       You won’t regret staying for a minute or two
-
+      <br>
+      <br>
       How do I start to let you know?
       That your spirit shines and countenance glow
       Your testimony is like a river which constantly flows
       Abundant and eternal that continually grows
-
+<br>
+      <br>
       Please know your eyes are captivating
       Your pretty smile, even more so mesmerizing
       Your brain? We all know CPAs are amazing
       This simply proves how great you are as a human being
-
+<br>
+      <br>
       Seriously, I want to know you even more
       Can’t stop praying about it for sure
       A lady like you who is mindful, cutesy, and demure
       A sister in Zion, ever so worthy and pure
-
+<br>
+      <br>
       Knowing you inspired me to be a better man
       I’m driven in ways that no one else can
       Continue to be a beacon to those other younger women
       Your existence strengthened my resolve to follow His plan
-
+<br>
+      <br>
       I pray you felt the goodness of my intention
       No rush, no pressure nor bad impression
       I may or may not have gotten your attention
       Thank God for helping me write you this recitation
-
+<br>
+      <br>
       I appreciate you staying until the end
       Hope these verses made you happy and enlightened
       Let us continue to help each other improve and ascend
@@ -361,6 +376,7 @@
         $('.two').animate({
           left: 0
         })
+        audio.play()
       })
       $('span#pubgId').click(function () {
         if ($('input#username').val() == "luxeslim") {
@@ -377,12 +393,11 @@
       })
       $('span#readME').click(function () {
         $('.six').fadeIn();
-        audio.play()
         typeWriter()
       })
       let i = 0, j = 0;
       let poemLines = poem.split('<br>');
-      let speed = 175;
+      let speed = 1;
 
       function typeWriter() {
         if (i < poemLines.length) {
